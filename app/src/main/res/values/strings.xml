@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Nice Wallpapers</string>
+    <string name="collections_bottom_nav">Collections</string>
+    <string name="saved_bottom_nav">Saved</string>
+    <string name="wallpapers_bottom_nav">Wallpapers</string>
 </resources>
