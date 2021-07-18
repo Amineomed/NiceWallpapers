@@ -1,4 +1,4 @@
-package com.amineomed.nicewallpapers.ui.fragments
+package com.amineomed.nicewallpapers.ui.photos
 
 import androidx.fragment.app.Fragment
 import com.amineomed.nicewallpapers.R

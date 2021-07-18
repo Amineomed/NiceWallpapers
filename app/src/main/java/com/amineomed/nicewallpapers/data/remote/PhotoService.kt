@@ -1,6 +1,7 @@
 package com.amineomed.nicewallpapers.data.remote
 
 import com.amineomed.nicewallpapers.data.models.photos.Photo
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -13,13 +14,13 @@ interface PhotoService {
         @Query("page") page: Int?, // Page number to retrieve. (Optional; default: 1)
         @Query("per_page") perPage: Int?, // Number of items per page. (Optional; default: 10)
         @Query("order_by") orderBy: String?, // How to sort the photos. Optional. (Valid values: latest, oldest, popular; default: latest)
-    ): List<Photo>
+    ): Response<List<Photo>>
 
     // Retrieve a single photo by id.
     @GET("photos/{id}")
     suspend fun getPhoto(
         @Path("id") photoId: String // The photo’s ID. Required
-    ): Photo
+    ): Response<List<Photo>>
 
     // Retrieve a single random photo, given optional filters.
     @GET("photos/random")
@@ -30,6 +31,6 @@ interface PhotoService {
         @Query("query") query: String?, // Limit selection to photos matching a search term.
         @Query("orientation") orientation: String?, // Filter by photo orientation. (Valid values: landscape, portrait, squarish)
         @Query("content_filter") contentFilter: String? // Limit results by content safety. Default: low. Valid values are low and high.
-    ): Photo
+    ): Response<List<Photo>>
     //Note: You can’t use the collections and query parameters in the same request
 }

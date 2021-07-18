@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/photosFragment"
-        android:name="com.amineomed.nicewallpapers.ui.fragments.PhotosFragment"
+        android:name="com.amineomed.nicewallpapers.ui.photos.PhotosFragment"
         android:label="fragment_photos"
         tools:layout="@layout/fragment_photos">
         <action
